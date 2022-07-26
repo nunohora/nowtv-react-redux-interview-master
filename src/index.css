@@ -10,3 +10,57 @@ body {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+ul {
+  margin: 0;
+}
+
+a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.loading-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.5rem;
+  }
+
+  .content > * {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .content > * {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content > * {
+    width: 992px;
+  }
+}

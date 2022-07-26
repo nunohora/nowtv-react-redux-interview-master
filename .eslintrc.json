@@ -1,7 +1,7 @@
 {
   "root": true,
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "settings": {
@@ -27,6 +27,7 @@
     "plugin:react/recommended"
   ],
   "rules": {
+    "react/prop-types": 0,
     "prettier/prettier": [
       "error",
       {
