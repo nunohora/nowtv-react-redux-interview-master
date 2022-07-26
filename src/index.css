@@ -46,15 +46,39 @@ h1 {
   flex-direction: column;
 }
 
+.user-avatar-wrapper {
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.user-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 768px) {
   .content > * {
     width: 100%;
+  }
+
+  .user-avatar-wrapper {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width: 768px) {
   .content > * {
     width: 768px;
+  }
+
+  .user-avatar-wrapper {
+    min-width: 3rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -76,21 +100,6 @@ h1 {
 
 .message-item:hover .user-email {
   visibility: visible;
-}
-
-.user-avatar-wrapper {
-  border: 1px solid black;
-  border-radius: 50%;
-  min-width: 3rem;
-  width: 3rem;
-  height: 3rem;
-  overflow: hidden;
-  margin-right: 1rem;
-}
-
-.user-avatar-wrapper img {
-  width: 100%;
-  height: 100%;
 }
 
 .message-info {
@@ -134,10 +143,6 @@ h1 {
   color: gray;
   opacity: 0.6;
   margin-left: auto;
-}
-
-.user-name {
-  margin-left: 1rem;
 }
 
 .back-link {
