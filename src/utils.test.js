@@ -1,4 +1,4 @@
-import { formatMessages } from './utils';
+import { composeMessages } from './utils';
 
 const messages = [
   {
@@ -39,9 +39,9 @@ const members = [
 ];
 
 describe('utils.js', () => {
-  describe('formatMessages', () => {
+  describe('composeMessages', () => {
     test('returns a new array with new ordered data', () => {
-      expect(formatMessages(messages, members)).toMatchObject([
+      expect(composeMessages(messages, members)).toMatchObject([
         {
           avatar: null,
           email: 'joebloggs@hmail.com',

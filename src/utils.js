@@ -1,4 +1,4 @@
-export const formatMessages = (messages, members) =>
+export const composeMessages = (messages, members) =>
   messages
     .map(({ userId, ...rest }) => {
       const { avatar, email, firstName, lastName } = members.find(({ id }) => id === userId);

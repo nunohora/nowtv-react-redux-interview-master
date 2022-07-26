@@ -28,43 +28,38 @@ describe('<AllMessages />', () => {
     const wrapper = shallow(<AllMessages messages={messages} />);
 
     expect(wrapper).toMatchInlineSnapshot(`
-      <Fragment>
-        <h1>
-          Chat room
-        </h1>
-        <ul
-          className="messages-container"
-        >
-          <Message
-            key="1"
-            message={
-              Object {
-                "avatar": null,
-                "email": "joebloggs@gmail.com",
-                "fullName": "Joe Bloggs",
-                "id": 1,
-                "message": "test message",
-                "timestamp": "12345",
-                "userId": 1,
-              }
+      <ul
+        className="messages-list"
+      >
+        <Message
+          key="1"
+          message={
+            Object {
+              "avatar": null,
+              "email": "joebloggs@gmail.com",
+              "fullName": "Joe Bloggs",
+              "id": 1,
+              "message": "test message",
+              "timestamp": "12345",
+              "userId": 1,
             }
-          />
-          <Message
-            key="2"
-            message={
-              Object {
-                "avatar": null,
-                "email": "joebloggs2@gmail.com",
-                "fullName": "Joe Bloggs 2",
-                "id": 2,
-                "message": "test message 2",
-                "timestamp": "123455",
-                "userId": 2,
-              }
+          }
+        />
+        <Message
+          key="2"
+          message={
+            Object {
+              "avatar": null,
+              "email": "joebloggs2@gmail.com",
+              "fullName": "Joe Bloggs 2",
+              "id": 2,
+              "message": "test message 2",
+              "timestamp": "123455",
+              "userId": 2,
             }
-          />
-        </ul>
-      </Fragment>
+          }
+        />
+      </ul>
     `);
   });
 });

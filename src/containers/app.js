@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { formatMessages } from '../utils';
+import { composeMessages } from '../utils';
 import { useSelector } from 'react-redux';
 import { getMessages, getMembers } from '../data';
 import { Switch, Route } from 'react-router';
@@ -8,7 +8,7 @@ import AllMessages from './AllMessages';
 import UserMessages from './UserMessages';
 
 const loadingSelector = ({ data: { loading } }) => loading;
-const composedMessagesSelector = ({ data: { messages, members } }) => formatMessages(messages, members);
+const composedMessagesSelector = ({ data: { messages, members } }) => composeMessages(messages, members);
 
 const App = () => {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ const App = () => {
           <div className="loading-container">Loading...</div>
         ) : (
           <div>
-            <h1>Welcome to my test solution!</h1>
+            <h1>Nuno's test</h1>
             <Switch>
               <Route exact path="/">
                 <AllMessages messages={composedMessages} />

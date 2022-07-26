@@ -1,7 +1,7 @@
 import dataReducer from './dataReducer';
 
 describe('dataReducer', () => {
-  it('SET_DATA', () => {
+  test('SET_DATA', () => {
     const action = {
       type: 'SET_DATA',
       members: [{ id: 1, firstName: 'Joe' }],

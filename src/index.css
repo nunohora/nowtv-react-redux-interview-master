@@ -5,8 +5,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -20,7 +19,11 @@ a {
   text-decoration: none;
 }
 
-.messages-container {
+h1 {
+  text-align: center;
+}
+
+.messages-list {
   display: flex;
   flex-direction: column;
   border: 1px solid #f3f4f6;
@@ -44,10 +47,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  body {
-    font-size: 0.5rem;
-  }
-
   .content > * {
     width: 100%;
   }
@@ -63,4 +62,91 @@ a {
   .content > * {
     width: 992px;
   }
+}
+
+.message-item {
+  display: flex;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.message-item:hover {
+  background-color: #f3f4f6;
+}
+
+.message-item:hover .user-email {
+  visibility: visible;
+}
+
+.user-avatar-wrapper {
+  border: 1px solid black;
+  border-radius: 50%;
+  min-width: 3rem;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.user-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.message-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.message-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.message-info-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.user-info {
+  display: flex;
+  white-space: nowrap;
+}
+
+.user-fullname {
+  font-weight: bold;
+  font-size: 0.8rem;
+  align-self: flex-end;
+}
+
+.user-email {
+  align-self: flex-end;
+  visibility: hidden;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.message-date {
+  align-self: flex-end;
+  font-size: 0.8rem;
+  color: gray;
+  opacity: 0.6;
+  margin-left: auto;
+}
+
+.user-name {
+  margin-left: 1rem;
+}
+
+.back-link {
+  margin-left: auto;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
 }
